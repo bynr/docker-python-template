@@ -1,4 +1,4 @@
-# play-vscode-analytics-python
+# Play with vscode for analytics in python
 
 **Objective** :dart:
 * A vscode environment for development & analytics with python, all using the [remote-container feature](https://code.visualstudio.com/docs/remote/containers)
