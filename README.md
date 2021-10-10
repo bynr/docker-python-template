@@ -1,7 +1,7 @@
 # play-vscode-analytics-python
 
 **Objective** :dart:
-* A vscode environment for development & analytics with python, all using the remote-container feature
+* A vscode environment for development & analytics with python, all using the [remote-container feature](https://code.visualstudio.com/docs/remote/containers)
     * Run a development workflow (build, edit, run, debug)
     * Run an analytics workflow
         * Run a jupyter notebook inside the devcontainer
