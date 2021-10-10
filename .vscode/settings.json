@@ -41,7 +41,7 @@
     "88"
   ],
   "python.sortImports.args": [
-    "--project=learn"
+    "--project=play"
   ],
   "python.analysis.extraPaths": [
     "/usr/local/lib/python3.9/site-packages"
