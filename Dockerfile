@@ -1,5 +1,5 @@
 # Base
-FROM python:3.8-slim-buster AS base
+FROM python:3.9-slim-buster AS base
 WORKDIR /workspace
 ENV PYTHONPATH /workspace
 COPY pip.conf /etc/
@@ -9,7 +9,7 @@ RUN pip install -r requirements.txt
 # Production image
 FROM base AS production
 COPY . .
-ENTRYPOINT ["python", "./play/main.py"]
+ENTRYPOINT ["python", "./learn/main.py"]
 
 # Test base
 FROM base AS testbase
@@ -19,7 +19,7 @@ RUN pip install -r requirements-test.txt
 # Test image
 FROM testbase AS test
 COPY . .
-ENTRYPOINT ["pytest", "./play/tests"]
+ENTRYPOINT ["pytest", "./learn/tests"]
 
 # VS Code Dev Container image
 FROM testbase AS devcontainer

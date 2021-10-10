@@ -3,3 +3,4 @@ black==21.9b0
 rope==0.20.1
 debugpy==1.5.0
 pylint-pytest==1.1.2
+jupyterlab

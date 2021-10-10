@@ -34,16 +34,17 @@
     }
   },
   "python.pythonPath": "/usr/local/bin/python3",
+  "python.defaultInterpreterPath": "/usr/local/bin/python3",
   "python.formatting.provider": "black",
   "python.formatting.blackArgs": [
     "--line-length",
-    "100"
+    "88"
   ],
   "python.sortImports.args": [
-    "--project=play"
+    "--project=learn"
   ],
   "python.analysis.extraPaths": [
-    "/usr/local/lib/python3.8/site-packages"
+    "/usr/local/lib/python3.9/site-packages"
   ],
   "python.languageServer": "Pylance",
   "python.analysis.typeCheckingMode": "basic",
@@ -79,5 +80,11 @@
   "shellformat.effectLanguages": [
     "shellscript",
     "dotenv"
-  ]
+  ],
+  "jupyter.jupyterServerType": "local",
+  // "python.dataScience.jupyterServerURI": "http://127.0.0.1:8888/?token=c9eab79048b0769b21e1c0d7aa8c4e787c23738b127f9aa7",
+  // "jupyter.jupyterServerType": "remote"
+  // setting jupyter uri is not supported anymore...
 }
+// jupyter.jupyterServerURI
+

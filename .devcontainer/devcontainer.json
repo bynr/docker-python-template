@@ -11,12 +11,17 @@
   "remoteEnv": {
     "LOCAL_WORKSPACE_FOLDER": "${localWorkspaceFolder}"
   },
+  "runArgs": [
+    "--env-file",
+    ".env"
+  ],
   "extensions": [
     "foxundermoon.shell-format",
     "mads-hartmann.bash-ide-vscode",
     "ms-azuretools.vscode-docker",
     "ms-python.python",
     "ms-python.vscode-pylance",
+    "ms-toolsai.jupyter",
     "njpwerner.autodocstring",
     "visualstudioexptteam.vscodeintellicode"
   ]
