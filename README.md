@@ -1,6 +1,6 @@
 # play-vscode-analytics-python
 
-**Objective**
+**Objective** :dart:
 * A vscode environment for development & analytics with python, all using the remote-container feature
     * Run a development workflow (build, edit, run, debug)
     * Run an analytics workflow
@@ -8,42 +8,42 @@
         * Run a python interactive window
         * Run a jupyter notebook connected to a remote jupyter server
 
-**How-to**
+**How-to** :book:
 
 _All steps below are inside the devcontainer._
 
-* **Build** the remote container
+* :hammer: **Build** the remote container
     * Clone and open this repository with vscode
     * Press `F1` and select **Remote-Containers: Open Folder in Container...**
     * Select the root directory of this repo, wait for the container to start, and try things out!
 
-* **Show logs**
+* :scroll: **Show logs**
     * Press `F1` → select `view logs`
 
-* **Edit** code
+* :pencil2: **Edit** code
     * Open `main.py`
     * Try adding some code and check out the language features.
     * Try auto-complete: hit `cmd+space`
 
-* **Run** a file
+* :runner: **Run** a file
     * Press ctrl+shift+` to open a terminal pane
     * Type `python -m play.main` in the terminal pane
     * Check the output in the terminal pane
 
-* **Debug**
+* :bug: **Debug**
     * Open `main.py`
     * Add a breakpoint on a line
     * Press `F5` to launch the app in the container (select run the current file in debug mode)
     * Once the breakpoint is hit, try hovering over variables, examining locals, etc.
 
-* Run a **jupyter notebook inside the devcontainer**
+* :notebook: Run a **jupyter notebook inside the devcontainer**
     * Make sure that `"jupyter.jupyterServerType": "local"` is set in in `.vscode/settings.json`
     * `F1` -> select `Remote-Container : Reopen in Container`
     * Open the `sample.ipynb` file
     * If you see the `No Python interpreter is selected...` popup → select the one that says `usr/local/bin/python` python 3.9.7
     * Select a cell and run it with `ctrl+enter` (same as in usual jupyter notebook webui)
 
-* Run a **python interactive window**
+* :repeat: Run a **python interactive window**
     * go to `main.py`
     * `F1` -> run in interactive window
     * in the interractive window, select interpreter `usr/local/bin/python` `(python 3.9.7)` (it's the one provided by the devcontainer)
@@ -52,7 +52,7 @@ _All steps below are inside the devcontainer._
     * type `ctrl + enter` to run cell (and stay in the same cell)
     * type `help(somefunc)` and execute it to show full docstring
 
-* Run a **jupyter notebook in a remote jupyter server**
+* :notebook: + :ringed_planet: Run a **jupyter notebook in a remote jupyter server**
     * start your jupyter server locally (for instance) by typing `jupyter notebook .`
     * copy the uri and the token generated in the terminal
     * create a new notebook in vscode
@@ -70,7 +70,7 @@ _All steps below are inside the devcontainer._
         * You cannot execute jobs in the remote jupyter kernel overnight because of this! For such use cases, it is recommended to simply use the standard jupyter notebook/lab interface.
     * See this [github issue](https://github.com/microsoft/vscode-jupyter/issues/1378) for more details and how it should be resolved.
 
-* **Rebuild** a container in vscode devcontainer
+* :hammer::hammer: **Rebuild** a container in vscode devcontainer
 
     This is needed when you change a dependency, the `Dockerfile` or some setting, etc.
     * `F1` -> select `remote-container: rebuild container`
