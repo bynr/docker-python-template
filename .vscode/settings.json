@@ -59,8 +59,6 @@
   "python.linting.pylintUseMinimalCheckers": false,
   "python.testing.pytestEnabled": true,
   "python.testing.autoTestDiscoverOnSaveEnabled": true,
-  "autoDocstring.docstringFormat": "sphinx",
-  "autoDocstring.customTemplatePath": "/workspace/.vscode/docstring.mustache",
   // Shell
   "[shellscript]": {
     "editor.formatOnSave": true
@@ -82,9 +80,4 @@
     "dotenv"
   ],
   "jupyter.jupyterServerType": "local",
-  // "python.dataScience.jupyterServerURI": "http://127.0.0.1:8888/?token=c9eab79048b0769b21e1c0d7aa8c4e787c23738b127f9aa7",
-  // "jupyter.jupyterServerType": "remote"
-  // setting jupyter uri is not supported anymore...
 }
-// jupyter.jupyterServerURI
-

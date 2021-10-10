@@ -7,8 +7,9 @@ def do_a():
     return a
 
 
-def run() -> None:
-    return
+def run(a, b) -> pd.DataFrame:
+    c = pd.DataFrame
+    return c
 
 
 if __name__ == "__main__":
