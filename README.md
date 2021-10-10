@@ -3,7 +3,7 @@
 **Objective** :dart:
 * A vscode environment for development & analytics with python, all using the [remote-container feature](https://code.visualstudio.com/docs/remote/containers)
     * Run a development workflow (build, edit, run, debug)
-    * Run an analytics workflow
+    * Run an interactive workflow (suited for analytics)
         * Run a jupyter notebook inside the devcontainer
         * Run a python interactive window
         * Run a jupyter notebook connected to a remote jupyter server
