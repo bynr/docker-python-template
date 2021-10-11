@@ -53,6 +53,7 @@ _All steps below are inside the devcontainer._
     * type `help(somefunc)` and execute it to show full docstring
 
 * :notebook: + :ringed_planet: Run a **jupyter notebook in a remote jupyter server**
+    * Note that you should not have opened your project inside the devcontainer! (as tested in my environment). If your vscode is running in the devcontainer, reopen it without.
     * start your jupyter server locally (for instance) by typing `jupyter notebook .`
     * copy the uri and the token generated in the terminal
     * create a new notebook in vscode
