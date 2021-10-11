@@ -2,15 +2,13 @@
 
 **Objective** :dart:
 * A vscode environment for development & analytics with python, all using the [remote-container feature](https://code.visualstudio.com/docs/remote/containers)
-    * Run a development workflow (build, edit, run, debug)
+    * Run a development workflow (build, edit, run, test, debug)
     * Run an interactive workflow (suited for analytics)
         * Run a jupyter notebook inside the devcontainer
         * Run a python interactive window
         * Run a jupyter notebook connected to a remote jupyter server
 
 **How-to** :book:
-
-_All steps below are inside the devcontainer._
 
 * :hammer: **Build** the remote container
     * Clone and open this repository with vscode
@@ -26,15 +24,21 @@ _All steps below are inside the devcontainer._
     * Try auto-complete: hit `cmd+space`
 
 * :runner: **Run** a file
-    * Press ctrl+shift+` to open a terminal pane
-    * Type `python -m play.main` in the terminal pane
-    * Check the output in the terminal pane
+    * Go to `src/play/main.py`
+    * `F1` -> `Python: Run python file in terminal`
 
 * :bug: **Debug**
     * Open `main.py`
     * Add a breakpoint on a line
     * Press `F5` to launch the app in the container (select run the current file in debug mode)
     * Once the breakpoint is hit, try hovering over variables, examining locals, etc.
+
+* :heavy_check_mark: **Run** test
+    * Go to `tests/test_main.py`
+    * `F1` -> `Test: Run test at cursor` to select a single test function
+    * To debug a test:
+        * set breakpoints
+        * `F1` -> `Test: Debug test at cursor`
 
 * :notebook: Run a **jupyter notebook inside the devcontainer**
     * Make sure that `"jupyter.jupyterServerType": "local"` is set in in `.vscode/settings.json`
@@ -57,7 +61,7 @@ _All steps below are inside the devcontainer._
     * start your jupyter server locally (for instance) by typing `jupyter notebook .`
     * copy the uri and the token generated in the terminal
     * create a new notebook in vscode
-    * `F1` -> ` jupyter: specify local or remote server`
+    * `F1` -> `jupyter: specify local or remote server`
     * paste the jupyter server uri with the token in the box
     * click on popup to reload workspace
     * try to run a cell in the notebook
@@ -105,6 +109,7 @@ _All steps below are inside the devcontainer._
 
 * [docs/datascience/jupyter-notebooks](https://code.visualstudio.com/docs/datascience/jupyter-notebooks)
 
+* [vscode python testing](https://code.visualstudio.com/docs/python/testing)
 
 
 **Next**

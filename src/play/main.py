@@ -1,12 +1,12 @@
 import pandas as pd
 
 
-def do_a():
+def run():
     a = pd.DataFrame([1])
     b = 123
-    return a
+    return b
 
 
 if __name__ == "__main__":
-    a = do_a()
+    a = run()
     print(a)
