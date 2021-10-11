@@ -11,10 +11,6 @@
   "remoteEnv": {
     "LOCAL_WORKSPACE_FOLDER": "${localWorkspaceFolder}"
   },
-  "runArgs": [
-    "--env-file",
-    ".env"
-  ],
   "extensions": [
     "foxundermoon.shell-format",
     "mads-hartmann.bash-ide-vscode",

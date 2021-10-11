@@ -5,6 +5,3 @@ def test_run():
     ret = run()
     assert ret is not None
     assert ret == 123
-
-
-test_run()
