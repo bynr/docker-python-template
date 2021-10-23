@@ -1,10 +1,6 @@
-import pandas as pd
-
-
 def run():
-    a = pd.DataFrame([1])
-    b = 123
-    return b
+    a = 123
+    return a
 
 
 if __name__ == "__main__":
