@@ -8,9 +8,16 @@
   "shutdownAction": "stopContainer",
   "workspaceFolder": "/workspace",
   "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind,consistency=cached",
+  "mounts": [
+    "source=play-vscode-analytics-extensions-cache-volume,target=/root/.vscode-server/extensions,type=volume",
+  ],
   "remoteEnv": {
     "LOCAL_WORKSPACE_FOLDER": "${localWorkspaceFolder}"
   },
+  "runArgs": [
+    "--env-file",
+    ".env"
+  ],
   "extensions": [
     "foxundermoon.shell-format",
     "mads-hartmann.bash-ide-vscode",

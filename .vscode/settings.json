@@ -1,12 +1,22 @@
 {
-  "terminal.integrated.shell.linux": "/bin/bash",
+  "autoDocstring.docstringFormat": "google",
   "files.insertFinalNewline": true,
+  "terminal.integrated.defaultProfile.linux": "bash",
+  "terminal.integrated.inheritEnv": true,
+  "terminal.integrated.profiles.linux": {
+    "bash": {
+      "path": "/bin/bash",
+      "args": [
+        "-l"
+      ]
+    }
+  },
   "files.trimTrailingWhitespace": true,
   "files.trimFinalNewlines": true,
   "files.exclude": {
     "**/.DS_Store": true,
     "**/__pycache__": true,
-    "**/.pytest_cache": true,
+    "**/.pytest_cache": true
   },
   "[markdown]": {
     "editor.wordWrap": "wordWrapColumn",
@@ -16,13 +26,16 @@
   "[json]": {
     "editor.formatOnSave": true,
     "editor.detectIndentation": false,
-    "editor.tabSize": 2,
+    "editor.tabSize": 2
   },
   // JSON with Comments
+  "files.associations": {
+    "*.json": "jsonc"
+  },
   "[jsonc]": {
     "editor.formatOnSave": true,
     "editor.detectIndentation": false,
-    "editor.tabSize": 2,
+    "editor.tabSize": 2
   },
   // Python
   "[python]": {
@@ -40,23 +53,13 @@
     "--line-length",
     "88"
   ],
-  "python.sortImports.args": [
-    "--project=play"
-  ],
-  "python.analysis.extraPaths": [
-    "/usr/local/lib/python3.9/site-packages"
-  ],
   "python.languageServer": "Pylance",
-  "python.analysis.typeCheckingMode": "basic",
+  "python.analysis.typeCheckingMode": "strict",
   "python.analysis.autoImportCompletions": false,
-  "python.envFile": "${workspaceFolder}/.env",
   "python.linting.enabled": true,
   "python.linting.lintOnSave": true,
-  "python.linting.pylintEnabled": true,
-  "python.linting.pylintArgs": [
-    "--load-plugins=pylint_pytest"
-  ],
-  "python.linting.pylintUseMinimalCheckers": false,
+  "python.linting.flake8Enabled": true,
+  "python.linting.mypyEnabled": false,
   "python.testing.pytestEnabled": true,
   "python.testing.autoTestDiscoverOnSaveEnabled": true,
   // Shell
@@ -79,5 +82,5 @@
     "shellscript",
     "dotenv"
   ],
-  "jupyter.jupyterServerType": "local",
+  "jupyter.jupyterServerType": "local"
 }
