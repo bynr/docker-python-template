@@ -100,3 +100,6 @@ site/
 
 # dask
 dask-worker-space/
+
+# ruff
+.ruff_cache/

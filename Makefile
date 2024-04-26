@@ -17,19 +17,11 @@ run:
 	-p $(HOST_JUPYTER_PORT):8888 \
 	--name dev-notebook \
 	mydevcontainer/notebook $(RUN_CMD)
-	echo "If you run this container locally, go to http://localhost:$(HOST_JUPYTER_PORT)"
+	echo "If you run this container locally, go to http://localhost:$(HOST_JUPYTER_PORT)."
+	echo "If a password is requested, check the container logs with 'make logs' and copy the url with the token."
 
-mount-src:
-	docker rm -f mysrc || echo
-	docker create -v /workspace --name mysrc alpine:3.4 /bin/true
-	docker cp $(PROJECT_ROOT)/src mysrc:/workspace/
-	docker cp $(PROJECT_ROOT)/tests mysrc:/workspace/
-
-unittest: mount-src
-	docker run -it \
-	--env-file=.env \
-	--volumes-from mysrc \
-	mydevcontainer/notebook pytest $(TEST_OPTS)
+unittest:
+	docker exec -it dev-notebook pytest $(TEST_OPTS)
 
 logs:
 	docker logs dev-notebook
@@ -46,23 +38,20 @@ bash:
 help:
 	cat $(MAKEFILE_PATH)/Makefile
 
-install-linters:
-	pip3 install flake8==4.0.1 black==21.9b0 isort==5.9.3
+install-linter:
+	pip3 install ruff==0.4.2
 
 lint:
-	isort --check --profile black $(SRC_PATHS)
-	black --check --line-length=88 $(SRC_PATHS)
-	flake8 $(SRC_PATHS)
+	ruff check
 
 fix-lint:
-	isort --profile black $(SRC_PATHS)
-	black --line-length=88 $(SRC_PATHS)
+	ruff check --fix
 
 clean:
 	find . \( -name \*.pyc -o -name saml.html -o -name \*.pyo -o -name .mypy_cache -o -name .pytest_cache -o -name .ipynb_checkpoints -o -name __pycache__ \) -prune -exec rm -rf {} +
 
 install-mypy:
-	pip3 install mypy==0.910
+	pip3 install mypy==1.10.0
 
 mypy:
 	mypy --ignore-missing-imports --strict-optional --disallow-untyped-calls $(SRC_PATHS)

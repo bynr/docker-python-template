@@ -1,3 +1,18 @@
+# core
 pandas
 numpy
-sklearn
+scikit-learn
+
+# dev
+rope
+debugpy
+jupyterlab
+
+# test
+pytest
+isort
+pytest
+flake8
+ruff
+mypy
+pytest-cov

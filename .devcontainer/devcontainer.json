@@ -3,7 +3,6 @@
   "build": {
     "dockerfile": "../Dockerfile",
     "context": "..",
-    "target": "devcontainer"
   },
   "shutdownAction": "stopContainer",
   "workspaceFolder": "/workspace",
@@ -19,13 +18,14 @@
     ".env"
   ],
   "extensions": [
-    "foxundermoon.shell-format",
-    "mads-hartmann.bash-ide-vscode",
-    "ms-azuretools.vscode-docker",
     "ms-python.python",
-    "ms-python.vscode-pylance",
     "ms-toolsai.jupyter",
+    "tamasfe.even-better-toml",
     "njpwerner.autodocstring",
-    "visualstudioexptteam.vscodeintellicode"
-  ]
+    "charliermarsh.ruff",
+    "eamodio.gitlens",
+    "ms-azuretools.vscode-docker"
+  ],
+  // Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
+  // "remoteUser": "root"
 }

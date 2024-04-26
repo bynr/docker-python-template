@@ -2,6 +2,12 @@
 
 ## With the command line :keyboard:
 
+### Prerequisites
+To run linter and static analysis tools in your local environment, install the following:
+- ruff
+- mypy
+
+### Commands
 * `make build`: build docker container
 * `make run HOST_JUPYTER_PORT=8888`: run a jupyterlab server locally and expose it to the port 8888
 * `make rm`: remove the notebook container
